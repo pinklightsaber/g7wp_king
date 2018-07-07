@@ -96,7 +96,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(<?php bloginfo('template_url') ?> images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
