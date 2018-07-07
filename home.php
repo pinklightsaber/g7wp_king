@@ -68,7 +68,7 @@
 		</div>
 		<div class="project-content">
 			<div class="col-half">
-				<div class="project animate-box" style="background-image:url(images/project-3.jpg);">
+				<div class="project animate-box" style="background-image:url(<?php bloginfo('template_url') ?> /assets/images/project-3.jpg);">
 					<div class="desc">
 						<span>Application</span>
 						<h3>Project Name</h3>
@@ -76,13 +76,13 @@
 				</div>
 			</div>
 			<div class="col-half">
-				<div class="project-grid animate-box" style="background-image:url(images/project-5.jpg);">
+				<div class="project-grid animate-box" style="background-image:url(<?php bloginfo('template_url') ?> /assets/images/project-5.jpg);">
 					<div class="desc">
 						<span>Illustration</span>
 						<h3>Project Name</h3>
 					</div>
 				</div>
-				<div class="project-grid animate-box" style="background-image:url(images/project-2.jpg);">
+				<div class="project-grid animate-box" style="background-image:url(<?php bloginfo('template_url') ?> /assets/images/project-2.jpg);">
 					<div class="desc">
 						<span>Branding</span>
 						<h3>Project Name</h3>
