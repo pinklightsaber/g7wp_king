@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html >
-<head>
-	<meta charset="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	
-	
-</head>
-<body>
-
-<?php if ( has_nav_menu( 'header-menu' ) ) { ?>
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'header_menu' ) ); ?>
-<?php } ?>
-
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 	<head>
 	<meta charset="<?php bloginfo('charset') ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>King &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
