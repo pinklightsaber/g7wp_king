@@ -37,7 +37,7 @@
 					<div id="fh5co-logo"><a href="index.html"><?php bloginfo('name') ?></a></div>
 				</div>
 				<div class="col-xs-9 text-right menu-1">
-					<?php if(has_nav_menu('header_menu')) {  ?>
+					<?php if(has_nav_menu('header-menu')) {  ?>
 						<?php wp_nav_menu(array(
 							'theme_location' => 'header-menu', 
 							'container'=> null)) ?>
