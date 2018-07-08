@@ -68,26 +68,53 @@
 		</div>
 		<div class="project-content">
 			<div class="col-half">
-				<div class="project animate-box" style="background-image:url(<?php bloginfo('template_url') ?>/assets/images/project-3.jpg);">
+			<?php
+				$project_a = array(
+					'post_type'		 => 'project',
+					'posts_per_page' => 1
+					
+				);
+				$get_project_a = new WP_Query( $project_a );
+				while ( $get_project_a->have_posts() ) {
+					$get_project_a->the_post();
+					$thumb_id = get_post_thumbnail_id();
+					$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+				?>
+
+
+				<div class="project animate-box" style="background-image:url(<?= $thumb_url[0] ?>);">
+					<!-- thumb url es un arreglo y 0 es la posicion de la img -->
 					<div class="desc">
-						<span>Application</span>
-						<h3>Project Name</h3>
+						<span><?php the_field('area') ?></span>
+						<h3><?php the_title() ?></h3>
 					</div>
 				</div>
+				
+				<?php } wp_reset_postdata();?>
 			</div>
+
 			<div class="col-half">
-				<div class="project-grid animate-box" style="background-image:url(<?php bloginfo('template_url') ?>/assets/images/project-5.jpg);">
+				<?php
+					$project_b = array(
+						'post_type'		 => 'project',
+						'posts_per_page' => 2,
+						'offset'		 => 1
+					);
+					$get_project_b = new WP_Query( $project_b );
+					while ( $get_project_b->have_posts() ) {
+						$get_project_b->the_post();
+							$thumb_id = get_post_thumbnail_id();
+					$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+					?>
+				<div class="project-grid animate-box" style="background-image:url(<?= $thumb_url[0] ?>)">
 					<div class="desc">
 						<span>Illustration</span>
 						<h3>Project Name</h3>
 					</div>
 				</div>
-				<div class="project-grid animate-box" style="background-image:url(<?php bloginfo('template_url') ?>/assets/images/project-2.jpg);">
-					<div class="desc">
-						<span>Branding</span>
-						<h3>Project Name</h3>
-					</div>
-				</div>
+
+					<?php } wp_reset_postdata();
+				?>
 			</div>
 		</div>
 	</div>
