@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-3">
-					<div id="fh5co-logo"><a href="index.html"><?php bloginfo('name') ?></a></div>
+					<div id="fh5co-logo"><a href="#"><?php bloginfo('name') ?></a></div>
 				</div>
 				<div class="col-xs-9 text-right menu-1">
 					<?php if(has_nav_menu('header-menu')) {  ?>
@@ -55,6 +55,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<?php if(is_home() || is_front_page()) {  ?>
 							<h1>Start Your Journey</h1>
 							<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
 							<div class="row">
@@ -67,6 +68,10 @@
 									</div>
 								</form>
 							</div>
+						<?php  }else {  ?>
+							<h1><?php the_title() ?></h1>
+							<h2><time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time></h2>
+						<?php  } ?>
 						</div>
 					</div>
 				</div>
