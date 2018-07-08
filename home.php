@@ -84,10 +84,7 @@
 
 				<div class="project animate-box" style="background-image:url(<?= $thumb_url[0] ?>);">
 					<!-- thumb url es un arreglo y 0 es la posicion de la img -->
-					<div class="desc">
-						<span><?php the_field('area') ?></span>
-						<h3><?php the_title() ?></h3>
-					</div>
+					<?php get_template_part('_includes/home', 'project_desc') ?>
 				</div>
 				
 				<?php } wp_reset_postdata();?>
@@ -107,10 +104,7 @@
 					$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 					?>
 				<div class="project-grid animate-box" style="background-image:url(<?= $thumb_url[0] ?>)">
-					<div class="desc">
-						<span>Illustration</span>
-						<h3>Project Name</h3>
-					</div>
+					<?php get_template_part('_includes/home', 'project_desc') ?>
 				</div>
 
 					<?php } wp_reset_postdata();
