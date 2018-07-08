@@ -33,10 +33,10 @@
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">King.</a></div>
+				<div class="col-xs-3">
+					<div id="fh5co-logo"><a href="index.html"><?php bloginfo('name') ?></a></div>
 				</div>
-				<div class="col-xs-10 text-right menu-1">
+				<div class="col-xs-9 text-right menu-1">
 					<?php if(has_nav_menu('header_menu')) {  ?>
 						<?php wp_nav_menu(array(
 							'theme_location' => 'header-menu', 
@@ -48,7 +48,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(<?php bloginfo('template_url') ?>/assets/images/img_bg_2.jpg);">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
